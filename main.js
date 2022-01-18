@@ -74,3 +74,33 @@ console.log(testMap)
 const agesSquare=ages.map(age=>Math.sqrt(age))
 const agesTimesTwo=ages.map(age=>age*2)
 console.log(agesSquare, agesTimesTwo)
+
+// Sort
+const sortedCompanies=companies.sort((c1,c2)=>{
+ if(c1.start>c2.start){
+     return 1
+ }else{
+     return -1
+ }
+})
+console.log(sortedCompanies)
+// sort ages
+const sortAges=ages.sort((a,b)=>a-b)
+
+//reduce
+let ageSum=0
+for(let i=0; i<ages.length; i++){
+    ageSum +=ages[i]
+}
+console.log(ageSum)
+ageSum=ages.reduce((total,age)=>{
+ return total+age
+},0)
+// Total years for all companies
+const totalYears=companies.reduce((total,company)=>{
+    return total+ (company.end-company.start)
+},0)
+console.log(totalYears)
+
+// combine methods
+const combined=ages.map(age=>age*2).filter(age=>age>=40).sort((a,b)=>a-b).reduce((a,b)=>a+b,0)

@@ -104,3 +104,8 @@ console.log(totalYears)
 
 // combine methods
 const combined=ages.map(age=>age*2).filter(age=>age>=40).sort((a,b)=>a-b).reduce((a,b)=>a+b,0)
+
+
+for(let i=0; i<10000000;i++){
+    x=x+1 
+}
